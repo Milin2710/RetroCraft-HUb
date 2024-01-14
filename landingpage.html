@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RetroCraftHub</title>
+  <link rel="stylesheet" href="styles1.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="chat.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <h1 class="head">RetroCraft Hub</h1>
+      </div>
+      <div class="rightnav">
+
+        <ul class="nav-links">
+          <li class="dropdown">
+            <a class="signinbtn" href="#">Sign In</a>
+            <ul class="dropdown-menu" id="dropdown-menu">
+              <li><a href="./freelancersign.html">Freelancer </a></li>
+              <li><a href="./recruitersign.html">Recruiter </a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="content">
+          <button class="mode" id="toggle">LIGHT MODE</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2 class="text">Lights, Camera, Interaction!
+        RetroCraft Hub - Unleashing the Digital Evolution of
+        Filmmaking Collaboration."</h2>
+      <h3 class="text">Your Gateway to Seamless Filmmaking Collaboration</h3>
+    </section>
+  </main>
+  <hr />
+  <div class="container marketing">
+  </div>
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="./img2.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500"
+          loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Crafting the Perfect Stage</h1>
+        <p class="lead">RetroCraft Hub is not merely a platform; it's a transformative journey into the digital
+          landscape of filmmaking. It's where dreams take shape, creativity finds its stage, and the fusion of talent
+          and opportunity creates cinematic masterpieces. Join us in this innovative filmmaking odyssey, where the
+          future of collaboration is now.</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <div class="cent col-lg-4">
+
+      <h2 class="fw-normal">Effortless Navigation</h2>
+      <p> Intuitive design ensures both producers and professionals can effortlessly navigate the platform, making
+        connections seamless.</p>
+
+    </div><!-- /.col-lg-4 -->
+    <div class="cent col-lg-4">
+
+      <h2 class="fw-normal">Streamlined Application </h2>
+      <p>Skilled professionals experience a streamlined application process, enhancing their ability to secure relevant
+        job opportunities efficiently</p>
+
+    </div><!-- /.col-lg-4 -->
+    <div class="cent col-lg-4">
+
+      <h2 class="fw-normal">Dynamic Collaboration</h2>
+      <p>A vibrant digital space where producers and professionals converge, creating a dynamic ecosystem for
+        unparalleled filmmaking collaboration.
+      </p>
+
+    </div><!-- /.col-lg-4 -->
+  </div><!-- /.row -->
+  <style>
+    .cent {
+      display: grid;
+      place-items: center;
+      margin-top: 4em;
+    }
+
+    .cent p {
+      text-align: center;
+    }
+  </style>
+  </div>
+
+
+
+  <div class="chat-bar-collapsible">
+    <button id="chat-button" type="button" class="collapsible">Chat with us!
+        <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+    </button>
+
+    <div class="contentchat">
+        <div class="full-chat-block">
+            <!-- Message Container -->
+            <div class="outer-container">
+                <div class="chat-container">
+                    <!-- Messages -->
+                    <div id="chatbox">
+                        <h5 id="chat-timestamp"></h5>
+                        <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                    </div>
+
+                    <!-- User input box -->
+                    <div class="chat-bar-input-block">
+                        <div id="userInput">
+                            <input id="textInput" class="input-box" type="text" name="msg"
+                                placeholder="Tap 'Enter' to send a message">
+                            <p></p>
+                        </div>
+
+                        <div class="chat-bar-icons">
+                            <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                onclick="heartButton()"></i>
+                            <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                onclick="sendMessage()"></i>
+                        </div>
+                    </div>
+
+                    <div id="chat-bar-bottom">
+                        <p></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+  <footer>
+    <p class="footerpara">&copy; 2024 RetroCraft Hub </p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <!-- <script src="landingpage.js"></script> -->
+    <script>
+      var flag = 0;
+  toggle.addEventListener("click", function () {
+    if(flag%2===1){
+
+      document.body.classList.remove("light");
+      document.querySelector('header').classList.remove("lightheader")
+      document.querySelector('footer').classList.remove("lightfooter")
+      document.querySelector('.dropdown-menu').classList.remove("lightdropdown-menu")
+      document.querySelectorAll('*').forEach(function(element) {
+         element.style.color = 'white';
+      });
+      document.querySelector('nav').classList.remove("lightheader")
+      toggle.classList.remove("lightmode")
+      toggle.innerHTML = "LIGHT MODE"
+   }
+   else {
+      document.body.classList.add("light");
+      document.querySelector('header').classList.add("lightheader")
+      document.querySelector('footer').classList.add("lightfooter")
+      document.querySelector('.dropdown-menu').classList.add("lightdropdown-menu")
+      document.querySelectorAll('*').forEach(function(element) {
+       element.style.color = 'black';
+     });
+     toggle.classList.add("lightmode")
+     toggle.innerHTML = "DARK MODE"
+      }
+      flag++;
+  });
+
+    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="responses.js"></script>
+    <script src="chat.js"></script>
+
+
+
+    <script>
+          const socket = new WebSocket("ws://localhost:3000");
+
+socket.addEventListener('open', () => {
+
+socket.addEventListener("message", (event) => {
+  const parsedMessage = JSON.parse(event.data);
+  if (parsedMessage.type === "chat") {
+    console.log(`${parsedMessage.name}: ${parsedMessage.content}`);
+    getBotResponse(`${parsedMessage.name}: ${parsedMessage.content}`);
+  } 
+  else if (parsedMessage.type === "system") {
+    console.log(parsedMessage.content);
+    getBotResponse(parsedMessage.content);
+  }
+});
+socket.addEventListener("close", () => {
+  getBotResponse("Connection closed");
+});
+})
+
+function sendMessage() {
+  sendButton();
+  const messageInp = document.getElementById("message");
+  const message = messageInp.value.trim();
+    socket.send(JSON.stringify({ type: "chat", content: message}));
+    getBotResponse(`You: ${message}`);
+    messageInp.value = "";
+}
+
+// function appendMessage(message) {
+//   const chatDiv = document.getElementById("chat");
+//   chatDiv.innerHTML += `<p>${message}</p>`;
+// }
+    </script>
+</body>
+
+</html>

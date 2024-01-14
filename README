@@ -1,0 +1,11 @@
+nodejs, express, mongodb, html, css, js
+
+
+landing page
+
+chatting feature: tries to use websockets but http and socket server both together generated error, therefore used only socket
+
+sign options:
+
+used http responses
+

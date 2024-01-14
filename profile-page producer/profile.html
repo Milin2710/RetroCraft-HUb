@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Profile Page</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- CSS -->
+   
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+}
+
+a {
+  text-decoration: none;
+}
+
+.centerdiv{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__wrapper header {
+  width: 100%;
+  background: url('../responsive-profile-page/galaxy.jpeg') no-repeat 50% 20% / cover;
+  min-height: calc(100px + 15vw);
+}
+
+.header__wrapper .cols__container .left__col {
+  padding: 25px 20px;
+  text-align: center;
+  max-width: 350px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.header__wrapper .cols__container .left__col .img__container {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.header__wrapper .cols__container .left__col .img__container img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 1px 3px 12px rgba(0, 0, 0, 0.18);
+}
+.header__wrapper .cols__container .left__col .img__container span {
+  position: absolute;
+  background: #2afa6a;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  bottom: 3px;
+  right: 11px;
+  border: 2px solid #fff;
+}
+.header__wrapper .cols__container .left__col h2 {
+  margin-top: 60px;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.header__wrapper .cols__container .left__col p {
+  font-size: 0.9rem;
+  color: #818181;
+  margin: 0;
+}
+.header__wrapper .cols__container .left__col .about {
+  justify-content: space-between;
+  position: relative;
+  margin: 35px 0;
+}
+.header__wrapper .cols__container .left__col .about li {
+  display: flex;
+  flex-direction: column;
+  color: #818181;
+  font-size: 0.9rem;
+}
+.header__wrapper .cols__container .left__col .about li span {
+  color: #1d1d1d;
+  font-weight: 600;
+}
+.header__wrapper .cols__container .left__col .about:after {
+  position: absolute;
+  content: "";
+  bottom: -16px;
+  display: block;
+  background: #cccccc;
+  height: 1px;
+  width: 100%;
+}
+.header__wrapper .cols__container .content p {
+  font-size: 1rem;
+  color: #1d1d1d;
+  line-height: 1.8em;
+}
+.header__wrapper .cols__container .content ul {
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+.header__wrapper .cols__container .content ul li {
+  display: flex;
+}
+.header__wrapper .cols__container .content ul i {
+  font-size: 1.3rem;
+}
+.header__wrapper .cols__container .right__col nav {
+  display: flex;
+  align-items: center;
+  padding: 30px 0;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.header__wrapper .cols__container .right__col nav ul {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.header__wrapper .cols__container .right__col nav ul li a {
+  text-transform: uppercase;
+  color: #818181;
+}
+.header__wrapper .cols__container .right__col nav ul li:nth-child(1) a {
+  color: #1d1d1d;
+  font-weight: 600;
+}
+.header__wrapper .cols__container .right__col nav button {
+  background: #0091ff;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.header__wrapper .cols__container .right__col nav button:hover {
+  opacity: 0.8;
+}
+.header__wrapper .cols__container .right__col .photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 20px;
+}
+.header__wrapper .cols__container .right__col .photos img {
+  max-width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsiveness */
+
+@media (min-width: 868px) {
+  .header__wrapper .cols__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+  }
+  .header__wrapper .cols__container .left__col {
+    padding: 25px 0px;
+  }
+  .header__wrapper .cols__container .right__col nav ul {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .header__wrapper .cols__container .right__col .photos {
+    height: 365px;
+    overflow: auto;
+    padding: 0 0 30px;
+  }
+}
+
+@media (min-width: 1017px) {
+  .header__wrapper .cols__container .left__col {
+    margin: 0;
+    margin-right: auto;
+  }
+  .header__wrapper .cols__container .right__col nav {
+    flex-direction: row;
+  }
+  .header__wrapper .cols__container .right__col nav button {
+    margin-top: 0;
+  }
+}
+/* .components{
+  display: flex;
+  flex-direction: column;
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+}
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+    color: #00E676;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 2.4rem;
+}
+
+.nav div.main_list ul li a:hover {
+    color: #00E676;
+}
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+    </style>
+
+  </head>
+  <body>
+
+    
+
+    
+
+
+    <nav class="nav">
+      <div class="container">
+          <div class="logo">
+              <a href="#">RetroCraft Hub</a>
+          </div>
+          <div id="mainListDiv" class="main_list">
+              <ul class="navlinks">
+                  <li><a href="../landingpage.html">HOME</a></li>
+                  <li><a href="../producer.html">HIRE</a></li>
+              </ul>
+          </div>
+          <span class="navTrigger">
+              <i></i>
+              <i></i>
+              <i></i>
+          </span>
+      </div>
+  </nav>
+
+
+
+    <div class="header__wrapper">
+      <header></header>
+      <div class="cols__container">
+        <div class="left__col">
+          <div class="img__container">
+            <img src="https://c8.alamy.com/comp/D8AD71/young-professional-man-holding-a-clipboard-and-gesturing-with-hand-D8AD71.jpg" alt="Anna Smith" />
+          </div>
+          <h2 id="name">Name</h2>
+          <p id="type">Producer Type</p>
+         
+
+          
+
+          <div class="content">
+            <p id="about">   
+            </p>
+
+           
+          </div>
+        </div>
+        <div class="centerdiv right__col">
+          <nav>
+            <ul class="components">
+             
+              <li><a id="projdesc">Project Description</a></li>
+              <li><a id="contact">Contact Details</a></li>
+              <li><a id="preprof">Previous Projects</a></li>
+            </ul>
+            
+          </nav>
+
+          
+        </div>
+      </div>
+    </div>
+    <script>
+      async function fetchData() {
+        const generatedId = window.location.pathname.split('/').pop();
+        document.getElementById('projdesc').setAttribute("href", `/${generatedId}/proDes.html`)
+        document.getElementById('contact').setAttribute("href", `/${generatedId}/contact.html`)
+        document.getElementById('preprof').setAttribute("href", `/${generatedId}/preProject.html`)
+  fetch("http://localhost:3000/api/proddata")
+    .then((response) => response.json())
+    .then((data) => {
+      const mainContainer = document.getElementById("maincontainer");
+
+      const freedata = data.find((freedata) => freedata._id === generatedId)
+      document.getElementById("name").innerHTML = `${freedata.namerecruiterdetails}`
+      document.getElementById("type").innerHTML = `${freedata.prodtyperecruiterdetails}`
+      document.getElementById("about").innerHTML = `${freedata.projrecruiterdetails}`
+
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
+}
+fetchData();
+    </script>
+  </body>
+</html>

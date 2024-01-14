@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WhirlWind Warranty Registration</title> 
+    <link rel="stylesheet" href="signupJOB.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1 id="title">SIGN UP </h1>
+    <p id="description">Give the following details.</p>
+    <form action="/freelancerdetails" method="post" id="survey-form">
+        <label class="form-label" for="name" id="name-label">Name</label>
+        <input class="user-input" id="name" type="text" placeholder="Enter your name"
+        name="namefreelancerdetails" required>
+
+        <label class="form-label" for="email" id="email-label">Email</label>
+        <input class="user-input" id="email" type="email" placeholder="Enter your email"
+        name="emailfreelancerdetails" required>
+
+        <label class="form-label" for="number" id="number-label">Phone Number</label>
+        <input class="user-input" id="number" type="text" placeholder="Phone Number"
+        name="phonefreelancerdetails" required>
+
+        <label class="form-label" for="name" id="name-label">Twitter link</label>
+        <input class="user-input" id="name" type="text" placeholder="Enter your twitter account link" name="twitterfreelancerdetails" required>
+
+        <label class="form-label" for="name" id="name-label">Pinterest Link</label>
+        <input class="user-input" id="name" type="text" placeholder="Enter your pinterest account link" name="pinterestfreelancerdetails" required>
+
+        <label class="form-label" for="name" id="name-label">Facebook link</label>
+        <input class="user-input" id="name" type="text" placeholder="Enter your facebook account link" name="facebookfreelancerdetails" required>
+        
+        
+        <label class="form-label" for="number" id="number-label">Age</label>
+        <input class="user-input" id="number" type="number" min="1" max="99" placeholder="0" name="agefreelancerdetails" required>
+
+        <label class="form-label" for="name" id="name-label">Address</label>
+        <input class="user-input" id="name" type="text" placeholder="Enter your current address" name="addressfreelancerdetails" required>
+
+        <label class="form-label" for="dropdown">Freelancer Type</label>
+        <select id="dropdown" name="typefreelancerdetails" class="user-input">
+            <option class="user-input" disabled selected>Freelancer</option>
+            <option class="user-input">Actor</option>
+            <option class="user-input">Cinematographer</option>
+            <option class="user-input">Composer</option>
+            <option class="user-input">Costume Designer</option>
+            <option class="user-input">Coordinator</option>
+           <option class="user-input">Screen Writer</option>
+            <option class="user-input">Dancer</option>
+        </select>
+      
+        <label class="form-label" for="comment-label">Previous Projects</label>
+        <textarea class="user-input" id="comment-label" maxlength="600" placeholder="Give a brief description of your previous projects" name="prevprojfreelancerdetails"></textarea>
+
+        <label class="form-label" for="name" id="name-label">Tell us about yourself and your background in filmmaking</label>
+        <textarea class="user-input" id="comment-label" maxlength="600" placeholder="Tell us about Yourself" name="aboutfreelancerdetails"></textarea>
+
+        <label class="form-label" for="name" id="name-label">Payment and Terms</label>
+        <textarea class="user-input" id="comment-label" maxlength="600" placeholder="What is your rate or pricing structure for projects of this nature " name="payfreelancerdetails"></textarea>
+
+        
+        
+        <label class="form-label" for="dropdown">Preferred Project Type</label>
+        <select id="dropdown" class="user-input" name="prefprojfreelancerdetails">
+            <option class="user-input" disabled selected>Feature Films</option>
+            <option class="user-input">Short Films</option>
+            <option class="user-input">Documentaries</option>
+            <option class="user-input">Animated Films</option>
+            <option class="user-input">Web Series</option>
+            <option class="user-input">Branded Content</option>
+           <option class="user-input">Music Videos</option>
+           <option class="user-input">Corporate Videos</option>
+           <option class="user-input">Commercial Films</option>
+           <option class="user-input">Interactive Films</option>
+        </select>
+
+
+        <label class="form-label" for="dropdown">Collaboration Style</label>
+        <select id="dropdown" class="user-input" name="collabfreelancerdetails">
+            <option class="user-input" disabled selected>Hierarchical Collaboration</option>
+            <option class="user-input">Holacracy and Flat Collaboration</option>
+            <option class="user-input">Director-Centric Collaboration</option>
+            <option class="user-input">Costume Designer</option>
+            <option class="user-input">Ensemble Collaboration</option>
+           <option class="user-input">Open Collaboration</option>
+           <option class="user-input">Cross-Functional Collaboration</option>
+           <option class="user-input">Autonomous Unit Collaboration</option>
+           <option class="user-input">Parallel Collaboration</option>
+           <option class="user-input">Crowdsourced Collaboration</option>
+           
+        </select>
+
+        <label class="form-label" for="name" id="name-label">Photo</label>
+        <input class="user-input" id="name" type="file">
+
+        <div class="submit-holder">
+            <button id="submit" type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
